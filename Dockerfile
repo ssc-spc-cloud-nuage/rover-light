@@ -90,15 +90,7 @@ RUN echo "Installing jq ${versionJq}..." && \
 ARG SSH_PASSWD
 
 ENV SSH_PASSWD=${SSH_PASSWD} \
-    USERNAME=${USERNAME} \
-    versionTerraform=${versionTerraform} \
-    versionTflint=${versionTflint} \
-    versionJq=${versionJq} \
-    TF_DATA_DIR="/home/${USERNAME}/.terraform.cache" \
-    TF_PLUGIN_CACHE_DIR="/home/${USERNAME}/.terraform.cache/plugin-cache"
-
-ARG versionRover
-ENV versionRover=${versionRover}
+    USERNAME=${USERNAME}
 
 USER ${USERNAME}
 WORKDIR /tf/caf
