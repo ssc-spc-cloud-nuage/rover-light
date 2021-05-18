@@ -54,7 +54,7 @@ RUN bash /tmp/library-scripts/terraform-debian.sh "${versionTerraform}" "${versi
 # https://github.com/gruntwork-io/terragrunt/releases/download/v0.28.19/terragrunt_linux_amd64
 #
 RUN echo "Installing terragrunt ${versionTerragrunt}..." && \
-    curl -sSL -o /bin/terragrunt https://github.com/gruntwork-io/terragrunt/releases/download/v0.28.19/terragrunt_linux_amd64 && \
+    curl -sSL -o /bin/terragrunt https://github.com/gruntwork-io/terragrunt/releases/download/v${versionTerragrunt}/terragrunt_linux_amd64 && \
     chmod +x /bin/terragrunt
 
 #
